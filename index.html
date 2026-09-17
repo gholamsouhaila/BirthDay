@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <div class="container">
+    <h1>🎉 Happy birthday to You honeybee 🐝</h1>
+    <img src="119.jpg" alt="Birthday" class="main-img">
+    <p class="message">
+      Today we celebrate someone amazing, full of life and compassion... 💖
+    </p>
+    <button onclick="showSurprise()">Click here for your surprise 🎁</button>
+    <div id="surprise" class="hidden">
+      <p>💖 You’re a light to the world <br> So today, make a wish, blow out your candles, and remember that somewhere out there, someone is incredibly grateful that you were born. ✨</p>
+      <audio id="birthday-audio" style="display:none;">
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+    </div>
+  </div>
+
+  <script src="fireworks.js"></script>
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").classList.remove("hidden");
+      const audio = document.getElementById("birthday-audio");
+      audio.play();
+    }
+  </script>
+</body>
+</html>

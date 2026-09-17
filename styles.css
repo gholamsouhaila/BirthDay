@@ -1,0 +1,109 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+  background: radial-gradient(circle at 50% 20%, #1a0f2e 0%, #000 70%);
+  color: white;
+  min-height: 100vh;
+}
+
+#fireworks-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 85%;
+  margin: 80px auto;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.25);
+  animation: fadeIn 1s ease-out;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.4;
+  text-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+}
+
+.main-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid #ff69b4;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+.message {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #ff69b4, #ff8fc7);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.hidden {
+  display: none;
+}
+
+#surprise {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #fffacd;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 50px auto;
+    padding: 30px 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .main-img {
+    width: 140px;
+    height: 140px;
+  }
+}
